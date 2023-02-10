@@ -2,9 +2,8 @@ with
 
 source as (
 
-    select * from public.customers
-)
-
+    select * from {{source('dbt_training','customers') }}
+),
 staged as (
 
     select

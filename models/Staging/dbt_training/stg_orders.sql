@@ -1,9 +1,9 @@
 with 
 
-source a (
+source as (
 
-    select * from public.orders
-)
+    select * from {{source('dbt_training','orders') }}
+),
 staged as (
 
     select

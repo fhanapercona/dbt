@@ -1,4 +1,4 @@
-with orders_ as (
+with orders as (
 
     select
         id as order_id,
@@ -6,7 +6,7 @@ with orders_ as (
         order_date,
         status
 
-    from orders
+    from public.orders
 
 )
-select * from orders_ 
+select * from orders

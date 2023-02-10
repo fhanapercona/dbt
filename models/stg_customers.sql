@@ -1,12 +1,12 @@
-with customers_ as (
+with customers as (
 
     select
         id as customer_id,
         first_name,
         last_name
 
-    from customers
+    from public.customers
 
 )
 
-select * from customers_
+select * from customers

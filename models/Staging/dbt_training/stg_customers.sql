@@ -1,12 +1,19 @@
-with customers as (
+with 
+
+source as (
+
+    select * from public.customers
+)
+
+staged as (
 
     select
         id as customer_id,
         first_name,
         last_name
 
-    from public.customers
+    from source
 
 )
 
-select * from customers
+select * from staged

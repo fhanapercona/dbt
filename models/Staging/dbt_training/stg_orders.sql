@@ -1,4 +1,10 @@
-with orders as (
+with 
+
+source a (
+
+    select * from public.orders
+)
+staged as (
 
     select
         id as order_id,
@@ -9,4 +15,4 @@ with orders as (
     from public.orders
 
 )
-select * from orders
+select * from staged
